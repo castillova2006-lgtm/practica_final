@@ -9,7 +9,7 @@ El proyecto modela un **sistema de gestión de biblioteca** con las siguientes e
 
 ---
 
-## Despliegue con Docker (Requisito Opción B)
+## Despliegue con Docker 
 
 ### Prerrequisitos
 - [Docker](https://www.docker.com/products/docker-desktop/) instalado
@@ -19,7 +19,7 @@ El proyecto modela un **sistema de gestión de biblioteca** con las siguientes e
 
 ```bash
 # 1. Clonar el repositorio
-git clone <URL_DEL_REPOSITORIO>
+git clone (https://github.com/castillova2006-lgtm/practica_final.git)
 cd practica_final
 
 # 2. Construir y levantar los contenedores
