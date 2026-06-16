@@ -1,0 +1,25 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: biblioteca_db
+    restart: always
+    environment:
+      POSTGRES_USER: escom_user
+      POSTGRES_PASSWORD: escom_password
+      POSTGRES_DB: biblioteca
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    network_mode: "host" 
+
+  app:
+    build: .
+    container_name: biblioteca_app
+    restart: "no"
+    network_mode: "host" 
+    volumes:
+      - .:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
